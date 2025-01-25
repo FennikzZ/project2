@@ -1,0 +1,195 @@
+/* สำหรับ container ของรายการสถานที่ */
+.destination {
+  background-color: #D9D7EF; /* สีฟ้าอ่อน (เหมือน mapcomponent) */
+  height: 100vh; /* ความสูงเต็มจอ */
+  width: 100%; /* ความกว้างเต็มจอ */
+}
+
+.destination .list-place {
+  background-color: #D9D7EF; /* สีฟ้าอ่อน (เหมือน mapcomponent) */
+  z-index: 1001; /* แสดงเหนือองค์ประกอบอื่น */
+  padding: 10px; /* เพิ่มระยะภายใน */
+}
+
+.destination .place-list {
+  list-style-type: none; /* ลบ bullet list */
+  padding: 0; /* ลบ padding ของ ul */
+  margin: 0; /* ลบ margin ของ ul */
+  overflow-y: auto; /* ทำให้ scroll ได้หากรายการเกิน */
+  max-height: 300px; /* กำหนดความสูงสูงสุด */
+}
+
+.destination .place-item {
+  padding: 10px; /* เพิ่มระยะภายใน */
+  border-bottom: 1px solid #ddd; /* เส้นแบ่งด้านล่าง */
+  cursor: pointer; /* เปลี่ยนเป็น pointer เมื่อ hover */
+  display: flex; /* จัดเรียงไอคอนและชื่อสถานที่ในแถวเดียวกัน */
+  align-items: center; /* จัดไอคอนและข้อความให้อยู่กึ่งกลาง */
+  gap: 10px; /* ระยะห่างระหว่างไอคอนและข้อความ */
+  transition: background-color 0.3s; /* เพิ่มเอฟเฟกต์เปลี่ยนสีเมื่อ hover */
+}
+
+.destination .place-item:hover {
+  background-color: #e0dff8; /* สีม่วงอ่อนเมื่อ hover */
+}
+
+/* กรณีไม่มีสถานที่ */
+.destination .place-item.no-places {
+  text-align: center;
+  color: #888; /* สีเทาสำหรับข้อความ */
+}
+
+/* สำหรับปุ่ม */
+.destination .pickup-button-container {
+  width: 98%; /* ปุ่มเต็มความกว้าง */
+  background-color: #D9D7EF; /* สีฟ้าอ่อน */
+  padding: 10px 20px;
+  position: fixed; /* ให้ปุ่มอยู่คงที่ที่ด้านล่าง */
+  bottom: 10px; /* ระยะห่างจากขอบล่าง */
+  left: 0;
+  z-index: 999; /* แสดงอยู่บนสุด */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+  text-align: center; /* จัดปุ่มให้อยู่ตรงกลาง */
+}
+
+/* สไตล์สำหรับปุ่ม */
+.destination .pickup-button,
+.destination .drop-button {
+  padding: 12px 20px;
+  background-color: #7F6ACB; /* สีม่วง */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  width: 100%; /* ปุ่มเต็มความกว้าง */
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px; /* ขนาดตัวอักษร */
+}
+
+.destination .pickup-button:hover,
+.destination .drop-button:hover {
+  background-color: #a696e0; /* สีม่วงอ่อนเมื่อ hover */
+}
+
+/* สไตล์สำหรับไอคอน */
+.destination .place-item img {
+  margin-right: 8px; /* ระยะห่างระหว่างไอคอนและข้อความ */
+  width: 20px; /* ขนาดของไอคอน */
+  height: 20px;
+  filter: hue-rotate(270deg) brightness(0.9); /* ปรับไอคอนให้เป็นโทนสีม่วง */
+}
+
+/* ช่องค้นหา */
+.destination .search-input {
+  width: 90%;
+    max-width: 600px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #99D7EF;
+    font-size: 18px;
+    outline: none;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+
+
+.destination.destination {
+  position: relative;
+}
+
+.destination .search-container {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  
+  box-sizing: border-box;
+}
+
+.destination .place-item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.destination .place-item img {
+  width: 20px;
+  height: 20px;
+}
+
+.destination .pickup-button-container {
+  margin-top: 10px;
+}
+
+
+
+
+.destination .search-input:focus {
+  border: 1px solid #7F6ACB; /* เปลี่ยนสีขอบ */
+  background-color: #ffffff; /* พื้นหลังอ่อน */
+  box-shadow: 0 4px 10px rgba(127, 106, 203, 0.3); /* เพิ่มเงา */
+}
+
+/* สำหรับ container */
+.destination .search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* ระยะห่างระหว่าง input และปุ่ม */
+  padding: 10px;
+  position: absolute; /* ตั้งตำแหน่ง absolute */
+  top: 10px; /* เลื่อนขึ้นไปที่ตำแหน่งด้านบน */
+  left: 50%; /* กึ่งกลางหน้าจอ */
+  transform: translateX(-50%); /* จัดกึ่งกลางด้วย transform */
+  z-index: 1000; /* ให้ container อยู่เหนือแผนที่ */
+}
+
+
+.destination .search-button {
+  padding: 10px 20px;
+  background-color: #7f6acb; /* สีปุ่ม */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.destination .search-button:hover {
+  background-color: #a696e0; /* สีปุ่มเมื่อ hover */
+}
+
+
+
+.destination .pickup-button-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 97%;
+  background-color: #D9D7EF;
+  padding: 20px; /* เพิ่ม padding เพื่อเพิ่มพื้นที่ภายใน */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  z-index: 999;
+}
+
+.destination .pickup-button {
+  padding: 20px 40px; /* เพิ่ม padding เพื่อให้ปุ่มดูใหญ่ขึ้น */
+  background-color: #7F6ACB;
+  color: white;
+  border: none;
+  border-radius: 10px; /* เพิ่มมุมโค้ง */
+  font-size: 20px; /* ขนาดตัวอักษรใหญ่ขึ้น */
+  font-weight: bold; /* ตัวอักษรหนา */
+  width: 100%; /* ให้ปุ่มเต็มความกว้าง container */
+  
+  cursor: pointer;
+  margin: 0 auto; /* จัดปุ่มให้อยู่ตรงกลาง */
+}
+
+.destination .pickup-button:hover {
+  background-color: #a696e0; /* สีเมื่อ hover */
+}

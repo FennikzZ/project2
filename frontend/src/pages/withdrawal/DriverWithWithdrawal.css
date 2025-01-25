@@ -1,0 +1,50 @@
+.driver-withdrawal-fullscreen {
+  display: flex;
+  height: 100vh;
+}
+
+.AdminSidebar {
+  width: 240px;
+  height: 100vh;
+}
+
+.content-container {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f0f2f5;
+}
+
+.history-button {
+  background-color: #47456cb2; /* สีที่เข้มขึ้น */
+  border-color: #7F6BCC;
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 18px;
+  color: white; /* ข้อความสีขาว */
+  font-weight: bold; /* ข้อความหนา */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* เงาที่เด่นขึ้น */
+  transition: all 0.3s ease-in-out; /* การเปลี่ยนแปลง */
+}
+
+  
+  /* Modal Styling */
+  .ant-modal-footer {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .ant-modal-title {
+    color: #9333EA;
+  }
+  
+  .ant-btn-primary {
+    background-color: #9333EA;
+    border-color: #9333EA;
+  }
+  
+  .ant-btn-primary:hover {
+    background-color: #7F6BCC;
+    border-color: #7F6BCC;
+  }
+  

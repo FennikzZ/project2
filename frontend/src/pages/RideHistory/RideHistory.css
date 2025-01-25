@@ -1,0 +1,87 @@
+/* ครอบคลุมทั้งหน้าจอ */
+.ride-history-container {
+  font-family: "Arial", sans-serif;
+  background-color: #dcd7f7;; /* พื้นหลังสีม่วงอ่อน */
+  min-height: 100vh; /* ความสูงเต็มหน้าจอ */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* บล็อกใหญ่ในพื้นที่ */
+.ride-history {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.ride-history .header {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #6a1b9a; /* สีม่วงเข้ม */
+}
+
+.ride-history .ride-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* ระยะห่างระหว่างการ์ด */
+}
+
+.ride-history .ride-card {
+  background: #CDC1FF; /* พื้นหลังสีขาว */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* เงา */
+  padding: 25px; /* เพิ่มความใหญ่ */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  width: 100%; /* เต็มความกว้าง */
+}
+
+.ride-history .ride-card:hover {
+  transform: translateY(-8px); /* ยกการ์ดขึ้นเล็กน้อย */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* เพิ่มเงาเมื่อ hover */
+}
+
+.ride-history .ride-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.ride-history .ride-card-header h3 {
+  margin: 0;
+  font-size: 24px; /* ข้อความใหญ่ขึ้น */
+  color: #000000; /* สีม่วงเข้ม */
+}
+
+.ride-history .ride-card-header .status {
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 16px;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.ride-history .status.complete {
+  background-color: #28a745; /* สีเขียว */
+}
+
+.ride-history .status.unknown {
+  background-color: #ffc107; /* สีเหลือง */
+}
+
+.ride-history .ride-card-body p {
+  margin: 10px 0;
+  font-size: 18px; /* ข้อความใหญ่ขึ้น */
+  color: #555;
+}
+
+.ride-history .ride-card-body strong {
+  color: #000000;
+}
+ 

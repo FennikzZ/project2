@@ -1,0 +1,122 @@
+.containerdriverchat {
+  font-family: 'Arial, sans-serif';
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh; /* ครอบคลุมเต็มหน้าจอ */
+  width: 100vw; /* ครอบคลุมความกว้างหน้าจอ */
+  background-color: #f5f5f5; /* สีพื้นหลัง */
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.containerdriverchat h1 {
+  font-size: 24px;
+  color: #37474f;
+  margin: 20px 0 10px;
+}
+
+.containerdriverchat p {
+  margin: 5px 0;
+}
+
+.connected {
+  color: green;
+  font-weight: bold;
+}
+
+.disconnected {
+  color: red;
+  font-weight: bold;
+}
+
+.chatBox {
+  flex: 1; /* ขยายเพื่อเติมเต็มพื้นที่ */
+  width: 100%;
+  max-width: 800px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px; /* เว้นช่องว่างระหว่าง chatBox และ input */
+}
+
+/* ตกแต่งข้อความ */
+.message {
+  padding: 12px 15px;
+  border-radius: 15px;
+  max-width: 70%;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message-user {
+  align-self: flex-end;
+  background-color: #d1e7dd;
+  color: #000;
+}
+
+.message-other {
+  align-self: flex-start;
+  background-color: #f8d7da;
+  color: #000;
+}
+
+.timestamp {
+  font-size: 10px;
+  color: #666;
+  text-align: right;
+  margin-top: 5px;
+}
+
+/* กล่องอินพุต */
+.inputSection {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  background-color: #d1c4e9;
+  border-radius: 0; /* ไม่มีเส้นโค้ง */
+  border-top: 1px solid #b39ddb;
+  position: sticky; /* ให้กล่องอินพุตติดอยู่ด้านล่าง */
+  bottom: 0;
+}
+
+.input {
+  flex: 1;
+  padding: 12px 15px;
+  border-radius: 25px;
+  border: 1px solid #b39ddb;
+  font-size: 14px;
+  background-color: #fff;
+  outline: none;
+}
+
+.sendButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #8e24aa;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.sendButton:hover {
+  background-color: #7b1fa2;
+}
