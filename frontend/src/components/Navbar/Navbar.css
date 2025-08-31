@@ -1,12 +1,12 @@
 /* สไตล์สำหรับ navbar */
-.navbaropern {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #2c2031; /* สีพื้นหลังของ Navbar */
 }
 
-.navbaropern .navbar .nav-links {
+.navbar .nav-links {
   display: flex;
   font-weight: bold; /* ทำข้อความตัวหนา */
   justify-content: center; /* จัดให้อยู่กึ่งกลางแนวนอน */
@@ -16,22 +16,49 @@
   padding: 0;
 }
 
-.navbaropern .navbar .nav-links li {
+.navbar .nav-links li {
   margin: 0 15px; /* ระยะห่างระหว่างแต่ละรายการ */
 }
 
-.navbaropern .navbar .nav-links li a {
+.navbar .nav-links li a {
   text-decoration: none; /* ลบขีดเส้นใต้ */
   color: #c6c3f1; /* สีของข้อความ */
   font-size: 16px;
 }
 
-.navbaropern .navbar .nav-links li a:hover {
+.navbar .nav-links li a:hover {
   color: #8c62a5; /* สีข้อความเมื่อ hover */
   transition: color 0.3s;
 }
 
-.navbaropern .profile-icon-wrapper:hover {
+.profile-icon-wrapper:hover {
   background-color: #ddb6ec; /* เปลี่ยนสีพื้นหลังเมื่อ hover */
   transition: background-color 0.3s;
+}
+
+.profile-container {
+  position: relative; /* สำคัญสำหรับ dropdown */
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 50px; /* เลื่อนลงจากไอคอน */
+  right: 0;
+  background-color: #2c2031;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 100;
+}
+
+.dropdown-menu a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.dropdown-menu a:hover {
+  background-color: #8c62a5;
+  border-radius: 3px;
 }
